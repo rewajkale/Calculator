@@ -34,6 +34,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+//exponent to a number like x^y
+- (IBAction)exponentTo:(id)sender {
+    setDecimal=0;
+    [self.decimalString setString:@"0."];
+    if(!([op isEqualToString:@""]||[op isEqualToString:@"="])) {
+        [self compute:(id)sender];
+    }
+    op=@"^";
+    if (round(op1)==op1) {
+        self.currOp.text=[NSString stringWithFormat:@"(%0.0f)%@",op1,op];
+    }
+    else
+        self.currOp.text=[NSString stringWithFormat:@"(%0.4f)%@",op1,op];
+}
+
+//sinh of a number
 - (IBAction)sinh:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -46,7 +62,7 @@
     }
     else
         self.currOp.text=[NSString stringWithFormat:@"%@(%0.4f)",op,op1];
-    op1=(op1*M_PI/180);
+    op1=(op1*M_PI/180.0);
     op1=sinh(op1);
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
@@ -57,6 +73,7 @@
     op2=0;
 }
 
+//cosh of a number
 - (IBAction)cosh:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -69,7 +86,7 @@
     }
     else
         self.currOp.text=[NSString stringWithFormat:@"%@(%0.4f)",op,op1];
-    op1=(op1*M_PI/180);
+    op1=(op1*M_PI/180.0);
     op1=cosh(op1);
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
@@ -80,6 +97,7 @@
     op2=0;
 }
 
+//tanh of a number
 - (IBAction)tanh:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -92,7 +110,7 @@
     }
     else
         self.currOp.text=[NSString stringWithFormat:@"%@(%0.4f)",op,op1];
-    op1=(op1*M_PI/180);
+    op1=(op1*M_PI/180.0);
     op1=tanh(op1);
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
@@ -103,6 +121,7 @@
     op2=0;
 }
 
+//go back one space
 - (IBAction)backSpace:(id)sender {
     if ([op isEqualToString:@""]) {
         if(setDecimal==0)
@@ -147,6 +166,7 @@
     }
 }
 
+//sine of a number
 - (IBAction)sin:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -159,7 +179,7 @@
     }
     else
         self.currOp.text=[NSString stringWithFormat:@"%@(%0.4f)",op,op1];
-    op1=(op1*M_PI/180);
+    op1=(op1*M_PI/180.0);
     op1=sin(op1);
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
@@ -170,6 +190,7 @@
     op2=0;
 }
 
+//cosine of a number
 - (IBAction)cos:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -182,7 +203,7 @@
     }
     else
         self.currOp.text=[NSString stringWithFormat:@"%@(%0.4f)",op,op1];
-    op1=(op1*M_PI/180);
+    op1=(op1*M_PI/180.0);
     op1=cos(op1);
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
@@ -193,6 +214,7 @@
     op2=0;
 }
 
+//tangent of a number
 - (IBAction)tan:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -205,7 +227,7 @@
     }
     else
         self.currOp.text=[NSString stringWithFormat:@"%@(%0.4f)",op,op1];
-    op1=(op1*M_PI/180);
+    op1=(op1*M_PI/180.0);
     op1=tan(op1);
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
@@ -216,6 +238,7 @@
     op2=0;
 }
 
+//inverse of a number
 - (IBAction)inv:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -238,6 +261,7 @@
     op2=0;
 }
 
+//changing the sign of a number
 - (IBAction)changeSign:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -260,6 +284,7 @@
     op2=0;
 }
 
+//absolute of a number
 - (IBAction)mod:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -283,6 +308,7 @@
 
 }
 
+//clear the display and reset
 - (IBAction)clearAll:(id)sender {
     op1=0;
     op2=0;
@@ -291,6 +317,7 @@
     self.currOp.text=@"0";
 }
 
+//square of number
 - (IBAction)square:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -313,6 +340,7 @@
     op2=0;
 }
 
+//factorial of number
 - (IBAction)factorial:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -336,6 +364,7 @@
     op2=0;
 }
 
+//natural logarithm of number
 - (IBAction)logarithme:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -359,6 +388,7 @@
     op2=0;
     }
 
+//logarithm to base 10 of number
 - (IBAction)logarithm:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -382,6 +412,7 @@
     op2=0;
 }
 
+//exponential of a number
 - (IBAction)exponential:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -405,6 +436,7 @@
     op2=0;
 }
 
+//tenth power of a number
 - (IBAction)tenthPower:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -428,6 +460,7 @@
 
 }
 
+//cube of a number
 - (IBAction)cube:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -451,6 +484,7 @@
     op2=0;
 }
 
+//square root of a number
 - (IBAction)squareRoot:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -474,6 +508,7 @@
     op2=0;
 }
 
+//cube root of a number
 - (IBAction)cubeRoot:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -497,12 +532,16 @@
     op2=0;
 }
 
+//add decimal point
 - (IBAction)addDecimal:(id)sender {
     setDecimal=1;
-    
+    if([op isEqualToString:@""])
+        self.currOp.text=[NSString stringWithFormat:@"%0.4f",op1];
+    else
+        self.currOp.text=[NSString stringWithFormat: @"(%0.4f)%@(%0.4f)",op1,op,op2];
 }
 
-
+//add operation
 - (IBAction)addOp:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -517,6 +556,7 @@
         self.currOp.text=[NSString stringWithFormat:@"(%0.4f)%@",op1,op];
 }
 
+//subtract operation
 - (IBAction)subOp:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -531,6 +571,7 @@
         self.currOp.text=[NSString stringWithFormat:@"(%0.4f)%@",op1,op];
 }
 
+//multiply operation
 - (IBAction)multOp:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -545,6 +586,7 @@
         self.currOp.text=[NSString stringWithFormat:@"(%0.4f)%@",op1,op];
 }
 
+//divide operation
 - (IBAction)divOp:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -559,6 +601,7 @@
         self.currOp.text=[NSString stringWithFormat:@"(%0.4f)%@",op1,op];
 }
 
+//equal to operation
 - (IBAction)compute:(id)sender {
     setDecimal=0;
     [self.decimalString setString:@"0."];
@@ -575,8 +618,10 @@
         op1=op1*op2;
     else if([op isEqualToString:@"/"])
         op1=op1/op2;
+    else if([op isEqualToString:@"^"])
+        op1=pow(op1, op2);
     else
-        self.currOp.text=[NSString stringWithFormat: @""];
+        self.currOp.text=[NSString stringWithFormat: @"0"];
     if (round(op1)==op1) {
         self.display.text=[NSString stringWithFormat:@"%0.0f",op1];
     }
@@ -586,6 +631,7 @@
     op2=0;
 }
 
+//select 1 operation
 - (IBAction)select1:(id)sender {
     currDigit=1;
     if([op isEqualToString:@"="])
@@ -625,6 +671,7 @@
     
 }
 
+//select 2 operation
 - (IBAction)select2:(id)sender {
     currDigit=2;
     if([op isEqualToString:@"="])
@@ -663,6 +710,7 @@
     }
 }
 
+//select 3 operation
 - (IBAction)select3:(id)sender {
     currDigit=3;
     if([op isEqualToString:@"="])
@@ -701,6 +749,7 @@
     }
 }
 
+//select 4 operation
 - (IBAction)select4:(id)sender {
     currDigit=4;
     if([op isEqualToString:@"="])
@@ -739,6 +788,7 @@
     }
 }
 
+//select 5 operation
 - (IBAction)select5:(id)sender {
     currDigit=5;
     if([op isEqualToString:@"="])
@@ -777,6 +827,7 @@
     }
 }
 
+//select 6 operation
 - (IBAction)select6:(id)sender {
     currDigit=6;
     if([op isEqualToString:@"="])
@@ -815,6 +866,7 @@
     }
 }
 
+//select 7 operation
 - (IBAction)select7:(id)sender {
     currDigit=7;
     if([op isEqualToString:@"="])
@@ -853,6 +905,7 @@
     }
 }
 
+//select 8 operation
 - (IBAction)select8:(id)sender {
     currDigit=8;
     if([op isEqualToString:@"="])
@@ -891,6 +944,7 @@
     }
 }
 
+//select 9 operation
 - (IBAction)select9:(id)sender {
     currDigit=9;
     if([op isEqualToString:@"="])
@@ -929,6 +983,7 @@
     }
 }
 
+//select 0 operation
 - (IBAction)select0:(id)sender {
     currDigit=0;
     if([op isEqualToString:@"="])
@@ -966,6 +1021,5 @@
             self.currOp.text=[NSString stringWithFormat: @"(%0.4f)%@(%0.4f)",op1,op,op2];
     }
 }
-
 
 @end

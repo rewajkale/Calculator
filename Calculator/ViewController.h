@@ -48,6 +48,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *sinhypo;
 @property (weak, nonatomic) IBOutlet UIButton *coshypo;
 @property (weak, nonatomic) IBOutlet UIButton *tanhypo;
+@property (weak, nonatomic) IBOutlet UIButton *exponT;
+- (IBAction)exponentTo:(id)sender;
 - (IBAction)sinh:(id)sender;
 - (IBAction)cosh:(id)sender;
 - (IBAction)tanh:(id)sender;

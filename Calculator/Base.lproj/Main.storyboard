@@ -97,17 +97,6 @@
                                     <action selector="select1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4D-9u-duA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7K-ri-jsA">
-                                <rect key="frame" x="101" y="269" width="58" height="31"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="select2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2iX-AJ-TdC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Civ-GL-fsh">
                                 <rect key="frame" x="167" y="269" width="65" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -440,6 +429,28 @@
                                     <action selector="tanh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9od-Vg-PEe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bM-Iz-yWY">
+                                <rect key="frame" x="167" y="457" width="65" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="^">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="exponentTo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g1L-q3-FNj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7K-ri-jsA">
+                                <rect key="frame" x="101" y="269" width="58" height="31"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="select2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2iX-AJ-TdC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" label="">
@@ -460,6 +471,7 @@
                         <outlet property="eight" destination="exo-mC-WSj" id="haG-ac-jVh"/>
                         <outlet property="equalTo" destination="pFf-BU-6GU" id="pbN-yK-9q3"/>
                         <outlet property="exp" destination="ygY-M8-Jy7" id="T52-MO-cBd"/>
+                        <outlet property="exponT" destination="6bM-Iz-yWY" id="tew-pM-rK9"/>
                         <outlet property="fact" destination="K6n-XI-NSG" id="6bj-qU-CEX"/>
                         <outlet property="five" destination="wM1-Lg-GbY" id="Zyt-5i-k0k"/>
                         <outlet property="four" destination="pcd-9i-Fea" id="I3v-JN-wKd"/>
